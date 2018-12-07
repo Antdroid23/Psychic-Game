@@ -12,7 +12,7 @@
 var computerChoice, computerGuesses, guessesLeft, guessesSoFar, wins, losses;
 
 computerChoice = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-computerGuesses = computerChoice[Math.floor(Math.random() * computerChoice.length)];
+computerGuesses = computerChoice[Math.floor(Math.random() * computerChoice.length)]; console.log (computerGuesses)
 guessesLeft = 9;
 guessesSoFar = []; //users guesses so far array
 wins = 0;
@@ -23,12 +23,13 @@ losses = 0;
 function reset (){
     guessesLeft = 9;
     guessesSoFar = [];
+    computerGuesses = computerChoice[Math.floor(Math.random()*computerChoice.length)];
 }
 
 
 
 document.onkeyup = function(event) {
-var userGuesses = String.fromCharCode(event.keyCode).toLowerCase();
+    var userGuesses = String.fromCharCode(event.keyCode).toLowerCase();
 
     if (!/[a-z]/.test(userGuesses)){
         alert ("please choose a letter only");
@@ -49,6 +50,7 @@ var userGuesses = String.fromCharCode(event.keyCode).toLowerCase();
         wins++;
         alert ("Your guess is correct, time to guess a different letter!");
         reset()
+        console.log (computerGuesses)
     }
 
     else {
@@ -59,13 +61,11 @@ var userGuesses = String.fromCharCode(event.keyCode).toLowerCase();
         losses++;
         alert ("You lost") 
         reset();
+        console.log (computerGuesses)
     }
 
     document.querySelector('#win').innerHTML = "Wins: " + wins;
     document.querySelector('#loss').innerHTML = "Losses: " + losses;
     document.querySelector('#guessesLeft').innerHTML = "Number of guesses left: " + guessesLeft;
     document.querySelector('#guessesSoFar').innerHTML = " Your guesses so far: " + guessesSoFar;
-
 };
-
-console.log ()
