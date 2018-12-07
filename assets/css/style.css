@@ -1,0 +1,40 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: rgb(44, 1, 44);
+    color: white;
+}
+
+.jumbotron {
+    background-color: rgb(44, 1, 44);
+}
+
+h1{
+    font-family: cursive;
+    font-weight: bold;
+}
+
+h5 {
+    font-family: cursive;
+    text-align: center;
+}
+
+.row {
+    font-family: 'Comic Sans MS';
+}
+
+.emptySpace {
+    background:  rgb(44, 1, 44);
+}
+
+.flex-fill {
+    flex: 1;
+}
+
+#footer{
+    text-align: center;
+    background-color: black;
+    padding: 50px;
+}
