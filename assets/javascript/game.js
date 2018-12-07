@@ -62,7 +62,7 @@ var userGuesses = String.fromCharCode(event.keyCode).toLowerCase();
     }
 
     document.querySelector('#win').innerHTML = "Wins: " + wins;
-    document.querySelector('#loss').innerHTML = "Losses: " +losses;
+    document.querySelector('#loss').innerHTML = "Losses: " + losses;
     document.querySelector('#guessesLeft').innerHTML = "Number of guesses left: " + guessesLeft;
     document.querySelector('#guessesSoFar').innerHTML = " Your guesses so far: " + guessesSoFar;
 
