@@ -29,8 +29,8 @@ h5 {
     background:  rgb(44, 1, 44);
 }
 
-.flex-fill {
-    flex: 1;
+.h-100 {
+    height: 46% !important;
 }
 
 .footer{
